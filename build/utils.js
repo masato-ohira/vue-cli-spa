@@ -63,12 +63,13 @@ exports.cssLoaders = function (options) {
     sass: generateLoaders('sass', {
       indentedSyntax: true,
       // importer: globImporter(),
-      // data: [
-      //   '@import "./core.sass"',
-      // ].join('\n'),
-      // includePaths: [
-      //   path.resolve(__dirname, '../src/assets/sass/')
-      // ],
+      // vue内でsass-mixinsを利用可能に
+      data: [
+        '@import "./core.sass"',
+      ].join('\n'),
+      includePaths: [
+        path.resolve(__dirname, '../src/assets/sass/')
+      ],
     }),
     scss: generateLoaders('sass'),
     stylus: generateLoaders('stylus'),

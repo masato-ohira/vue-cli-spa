@@ -8,7 +8,8 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js",
-    "git": "git add . && git commit -a -m 'auto commit'",
+    "git": "git add . && git commit -a -m $M",
+    "git:auto": "git add . && git commit -a -m 'auto commit'",
     "deploy": "npm run build && npm run git && git ftp push -k"
   },
   "dependencies": {
